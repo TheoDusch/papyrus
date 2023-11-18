@@ -69,7 +69,7 @@ COPY --from=builder /app/target/x86_64-unknown-linux-musl/release/papyrus_node /
 COPY config/ /app/config
 
 # Copy the load test executable and its resources.
-COPY --from=builder /app/target/x86_64-unknown-linux-musl/release/papyrus_load_test /app/target/release/papyrus_load_test
+COPY --from=builder /app/target/x86_64-unknown-linux-musl/release/papyrus_load_test /app/target/release/papyrus_load_test #copy from builder
 COPY crates/papyrus_load_test/resources/ /app/crates/papyrus_load_test/resources
 
 # Copy the dump_declared_classes executable.
